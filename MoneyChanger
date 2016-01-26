@@ -1,0 +1,24 @@
+MoneyChanger:
+import java.util.Scanner;
+public class MoneyChanger {
+
+	public static void main(String[] args) 
+	{
+	Scanner input= new Scanner(System.in);
+	System.out.print("Please Entet the Amount : ");
+	double amount = input.nextDouble();
+	int remain=(int)(amount*100);
+	int dollars = remain/100;
+	remain = remain%100;
+	int quarter = remain/25;
+	remain= remain%25;
+	int dimes=remain/10;
+	remain=remain%10;
+	int nickels=remain/5;
+	remain= remain%5;
+	System.out.println(" Your amount wiil be "+ amount +""
+		+ " consists of \n "+"\t"+dollars+ " dollars\n" + "\t"+quarter +" quarters\n"
+				+ "\t"+dimes+" dimes\n"+"\t"+nickels+" nickels\n" );
+	}
+
+}
